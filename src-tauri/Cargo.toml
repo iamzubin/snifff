@@ -1,0 +1,31 @@
+[package]
+name = "snifff"
+version = "0.1.0"
+description = "Network sniffer & IP geolocation heatmap"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "snifff_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+pcap = "2"
+etherparse = "0.16"
+rusqlite = { version = "0.31", features = ["bundled"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15"
+chrono = { version = "0.4", features = ["serde"] }
+log = "0.4"
+env_logger = "0.11"
+tauri-plugin-notification = "2.3.3"
+tauri-plugin-autostart = "2.5.1"
