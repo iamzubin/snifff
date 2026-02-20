@@ -18,7 +18,6 @@
 ## 📸 Preview
 
 ![SNIFFF Interface Overview](assets/screenshot.png)
-*Replace this with a real screenshot to showcase the tactical UI and World Map.*
 
 ---
 
